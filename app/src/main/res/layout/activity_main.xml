@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#795548"
+    >
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/ic_launcher_caffee" />
+
+        <EditText
+            android:id="@+id/name_edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffc107"
+            android:textColorHint="#ffc107"
+            android:hint="@string/name"
+            android:inputType="textCapWords"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+           />
+
+        <TextView
+            style="@style/HeaderTextStyle"
+            android:text="@string/toppings"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"/>
+
+        <CheckBox
+            android:id="@+id/whipped_cream_checkbok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/whipped_cream"
+            android:textColor="#ffc107"
+            />
+
+        <CheckBox
+            android:id="@+id/chocolate_checkbok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/chocolate"
+            android:textColor="#ffc107"/>
+
+            <TextView
+                style="@style/HeaderTextStyle"
+                android:text="@string/quantity"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"/>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:onClick="decrement"
+                android:text="-" />
+
+            <TextView
+                android:id="@+id/quantity_text_view"
+                style="@style/HeaderTextStyle"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:onClick="increment"
+                android:text="+" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/mesaj_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"/>
+
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="submitOrder"
+            android:text="@string/order_summary_email_subject"/>
+
+        <TextView
+            style="@style/HeaderTextStyle"
+            android:textStyle="bold"
+            android:text="@string/order"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/order_summary_text_view"
+            tools:text="aici e sumarul de info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffc107"
+            android:lineSpacingExtra="3dp"
+            tools:textColor="@color/colorAccent"
+            />
+
+
+    </LinearLayout>
+
+</ScrollView>
